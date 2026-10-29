@@ -18,6 +18,7 @@ The program should display the final marks, total marks, percentage, and result 
 10. Stop the program.
 # Mermaid Flowchart
 ```mermaid
+    flowchart TD
     A([Start]) --> B[/Enter marks for five subjects/]
     B --> C{Are all marks between 0 and 100?}
     C -- No --> D[/Display invalid marks/]
