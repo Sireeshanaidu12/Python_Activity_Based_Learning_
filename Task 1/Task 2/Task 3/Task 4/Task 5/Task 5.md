@@ -30,6 +30,7 @@ Step 6: Display the marks, average, and performance trend.
 Step 7: Stop the program.
 # Mermaid Flowchart
 ```mermaid
+flowchart TD
     A([Start]) --> B[/Enter marks in three examinations/]
     B --> C{Are all marks between 0 and 100?}
     C -- No --> D[/Display Invalid Marks/]
