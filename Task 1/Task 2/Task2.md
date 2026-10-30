@@ -36,8 +36,8 @@ Step 8: Display the attendance percentage and the required result.
 
 Step 9: Stop the program.
 # Mermaid Flowchart
-'''mermaid
-flowchart TD
+```mermaid
+    flowchart TD
     A([Start]) --> B[/Enter initial balance/]
     B --> C[Display ATM menu]
     C --> D[/Enter choice/]
@@ -60,8 +60,7 @@ flowchart TD
     O --> P([Stop])
     E -- Other --> Q[/Display invalid choice/]
     Q --> C
-
-'''
+```
 # Python Source Code
 import math
 
