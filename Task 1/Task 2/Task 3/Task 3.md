@@ -33,7 +33,29 @@ Step 7: Repeat Steps 3–6 until the user chooses Exit.
 Step 8: Stop the program.
 # Mermaid Flowchart
 ```mermaid
-    <img width="664" height="330" alt="image" src="https://github.com/user-attachments/assets/9416700c-0b5b-4ffd-99b7-771e7acbc3e7" />
+    flowchart TD
+    A([Start]) --> B[/Enter initial balance/]
+    B --> C[Display ATM menu]
+    C --> D[/Enter choice/]
+    D --> E{Select operation}
+    E -- 1 --> F[/Display account balance/]
+    F --> C
+    E -- 2 --> G[/Enter deposit amount/]
+    G --> H{Amount > 0?}
+    H -- Yes --> I[Add amount to balance]
+    H -- No --> J[/Display invalid amount/]
+    I --> C
+    J --> C
+    E -- 3 --> K[/Enter withdrawal amount/]
+    K --> L{Amount valid and balance sufficient?}
+    L -- Yes --> M[Subtract amount from balance]
+    L -- No --> N[/Display error message/]
+    M --> C
+    N --> C
+    E -- 4 --> O[/Display thank-you message/]
+    O --> P([Stop])
+    E -- Other --> Q[/Display invalid choice/]
+    Q --> C
 
 ```
  #  Python Source Code
