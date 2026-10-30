@@ -40,6 +40,7 @@ Step 8: Display the food prepared, food consumed, food wasted, waste percentage,
 Step 9: Stop the program.
 # Mermaid Flowchart
 ```mermaid
+flowchart TD
     A([Start]) --> B[/Enter food prepared and food wasted/]
     B --> C{Are inputs valid?}
     C -- No --> D[/Display Invalid Input/]
