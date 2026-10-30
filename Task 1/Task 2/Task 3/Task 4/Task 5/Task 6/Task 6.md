@@ -30,6 +30,7 @@ Step 9: Otherwise, display "Password is Invalid" and list the requirements that 
 Step 10: Stop the program.
 # Mermaid Flowchart
 ```mermaid
+   flowchart TD
     A([Start]) --> B[/Enter password/]
     B --> C[Check password length]
     C --> D[Check uppercase and lowercase letters]
