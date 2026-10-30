@@ -36,19 +36,8 @@ Step 8: Display the attendance percentage and the required result.
 
 Step 9: Stop the program.
 # Mermaid Flowchart
-```mermaid
-    A([Start]) --> B[/Enter total classes and attended classes/]
-    B --> C{Are inputs valid?}
-    C -- No --> D[/Display Invalid Input/]
-    D --> Z([Stop])
-    C -- Yes --> E[Calculate attendance percentage]
-    E --> F{Attendance >= 75%?}
-    F -- Yes --> G[/Display Eligible for attendance requirement/]
-    F -- No --> H[Calculate additional classes required]
-    H --> I[/Display classes needed to reach 75%/]
-    G --> Z
-    I --> Z
-```
+<img width="314" height="325" alt="image" src="https://github.com/user-attachments/assets/e1387191-5342-4001-9fac-d48a866b1a39" />
+
 # Python Source Code
 import math
 
