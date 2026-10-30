@@ -26,6 +26,7 @@ Step 6: Move to the next row and repeat until all rows are printed.
 Step 7: Stop the program.
 # Mermaid Flowchart
 ```mermaid
+flowchart TD
     A([Start]) --> B[/Enter number of rows N/]
     B --> C{Is N greater than 0?}
     C -- No --> D[/Display Invalid Input/]
