@@ -37,29 +37,19 @@ Step 8: Display the attendance percentage and the required result.
 Step 9: Stop the program.
 # Mermaid Flowchart
 ```mermaid
-    flowchart TD
-    A([Start]) --> B[/Enter initial balance/]
-    B --> C[Display ATM menu]
-    C --> D[/Enter choice/]
-    D --> E{Select operation}
-    E -- 1 --> F[/Display account balance/]
-    F --> C
-    E -- 2 --> G[/Enter deposit amount/]
-    G --> H{Amount > 0?}
-    H -- Yes --> I[Add amount to balance]
-    H -- No --> J[/Display invalid amount/]
-    I --> C
-    J --> C
-    E -- 3 --> K[/Enter withdrawal amount/]
-    K --> L{Amount valid and balance sufficient?}
-    L -- Yes --> M[Subtract amount from balance]
-    L -- No --> N[/Display error message/]
-    M --> C
-    N --> C
-    E -- 4 --> O[/Display thank-you message/]
-    O --> P([Stop])
-    E -- Other --> Q[/Display invalid choice/]
-    Q --> C
+flowchart TD
+    A([Start]) --> B[/Enter total classes and attended classes/]
+    B --> C{Are inputs valid?}
+    C -- No --> D[/Display Invalid Input/]
+    D --> Z([Stop])
+    C -- Yes --> E[Calculate attendance percentage]
+    E --> F{Attendance >= 75%?}
+    F -- Yes --> G[/Display Eligible for attendance requirement/]
+    F -- No --> H[Calculate additional classes required]
+    H --> I[/Display classes needed to reach 75%/]
+    G --> Z
+    I --> Z    
+
 ```
 # Python Source Code
 import math
