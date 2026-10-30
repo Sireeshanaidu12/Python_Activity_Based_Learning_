@@ -30,6 +30,7 @@ Step 7: Display the complete product catalogue, low-stock products, total invent
 Step 8: Stop the program.
 # Mermaid Flowchart
 ```mermaid
+flowchart TD
     A([Start]) --> B[Create product catalogue using tuples]
     B --> C[Initialize inventory value = 0]
     C --> D[Read product details]
