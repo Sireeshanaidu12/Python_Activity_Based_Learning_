@@ -36,8 +36,32 @@ Step 8: Display the attendance percentage and the required result.
 
 Step 9: Stop the program.
 # Mermaid Flowchart
-<img width="314" height="325" alt="image" src="https://github.com/user-attachments/assets/e1387191-5342-4001-9fac-d48a866b1a39" />
+'''mermaid
+flowchart TD
+    A([Start]) --> B[/Enter initial balance/]
+    B --> C[Display ATM menu]
+    C --> D[/Enter choice/]
+    D --> E{Select operation}
+    E -- 1 --> F[/Display account balance/]
+    F --> C
+    E -- 2 --> G[/Enter deposit amount/]
+    G --> H{Amount > 0?}
+    H -- Yes --> I[Add amount to balance]
+    H -- No --> J[/Display invalid amount/]
+    I --> C
+    J --> C
+    E -- 3 --> K[/Enter withdrawal amount/]
+    K --> L{Amount valid and balance sufficient?}
+    L -- Yes --> M[Subtract amount from balance]
+    L -- No --> N[/Display error message/]
+    M --> C
+    N --> C
+    E -- 4 --> O[/Display thank-you message/]
+    O --> P([Stop])
+    E -- Other --> Q[/Display invalid choice/]
+    Q --> C
 
+'''
 # Python Source Code
 import math
 
