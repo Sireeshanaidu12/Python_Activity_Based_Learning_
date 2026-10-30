@@ -30,6 +30,7 @@ Step 9: Display the marks matrix, student totals, student averages, subject aver
 Step 10: Stop the program.
 # Mermaid Flowchart
 ```mermaid
+flowchart TD
     A([Start]) --> B[/Enter number of students and subjects/]
     B --> C[Create empty marks matrix]
     C --> D[/Enter marks for each student and subject/]
