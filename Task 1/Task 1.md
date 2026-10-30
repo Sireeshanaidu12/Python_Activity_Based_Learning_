@@ -81,6 +81,49 @@ if valid:
         print("Result: PASS")
     else:
         print("Result: FAIL")
+
+# Input marks for five subjects
+for i in range(5):
+    mark = int(input("Enter marks for subject " + str(i + 1) + ": "))
+
+    if mark < 0 or mark > 100:
+        print("Invalid marks! Enter marks between 0 and 100.")
+        valid = False
+        break
+
+    marks.append(mark)
+
+if valid:
+    # Find failed subjects
+    failed = []
+
+    for i in range(5):
+        if marks[i] < 35:
+            failed.append(i)
+
+    # Apply grace marks if eligible
+    if len(failed) == 1:
+        i = failed[0]
+        shortfall = 35 - marks[i]
+
+        if shortfall <= 5:
+            marks[i] = 35
+            print("Grace marks applied:", shortfall)
+
+    # Calculate total and percentage
+    total = sum(marks)
+    percentage = (total / 500) * 100
+
+    # Display results
+    print("Final Marks:", marks)
+    print("Total Marks:", total, "/ 500")
+    print("Percentage:", round(percentage, 2), "%")
+
+    # Check final result
+    if all(mark >= 35 for mark in marks):
+        print("Result: PASS")
+    else:
+        print("Result: FAIL")
   # Sample Input   
   Enter marks for subject 1: 70
 Enter marks for subject 2: 65
