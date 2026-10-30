@@ -33,6 +33,7 @@ Step 8: Display the subtotal, discount amount, and final bill.
 Step 9: Stop the program.
 # Mermaid Flowchart
 ```mermaid
+flowchart TD
     A([Start]) --> B[/Enter number of products/]
     B --> C[Initialize subtotal = 0]
     C --> D[/Enter price and quantity/]
